@@ -3,6 +3,7 @@ let _auth = require('./Authorizer');
 let google = require('googleapis').google;
 const datastore = google.datastore('v1');
 exports.handler = function (event, context, callback) {
+	console.log("Test");
 	datastore.projects.beginTransaction({
 		projectId: process.env.GCLOUD_PROJECT_ID,
 		resource: {
